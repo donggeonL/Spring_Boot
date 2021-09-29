@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book List</title>
+</head>
+<body>
+
+    <h1>책 목록</h1>
+    <button><a href="/book/add">책 등록</a></button>
+    <ul th:each="book : ${bookList}">
+        <li><a th:href="@{/book/info/{id}(id=${book.id})}" th:text="${book.title}"></a></li>
+    </ul>
+
+</body>
+</html>

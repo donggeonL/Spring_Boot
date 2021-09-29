@@ -1,0 +1,31 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Update</title>
+</head>
+
+<body>
+<form th:action="@{/book/update/{id}(id=${book.id})}" method="post">
+    <label>梨� �젣紐�
+        <input type="text" name="title"/>
+    </label><br>
+    <label>�옉媛�
+        <input type="text" name="author"/>
+    </label><br>
+    <label for="bookshelf">梨낆옣</label>
+    <select id="bookshelf" name="bookshelfId">
+        <option
+                th:each="bookshelf : ${bookshelfList}"
+                th:text="${bookshelf.name}"
+                th:value="${bookshelf.id}"
+        ></option>
+    </select><br>
+    <input type="submit" value="update">
+</form>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Book info</title>
+  </head>
+
+  <body>
+    <h1 th:text="${book.title} + '�쓽 �젙蹂�'"></h1>
+    <ul>
+      <li th:text="'title : ' + ${book.title}"></li>
+      <li th:text="'author : ' + ${book.author}"></li>
+      <li th:text="'floor : ' + ${book.bookshelf.floor}"></li>
+      <li><button><a th:href="@{/book/update/{id}(id=${book.id})}">�닔�젙</a></button></li>
+      <li><button><a th:href="@{/book/delete/{id}(id=${book.id})}">�궘�젣</a></button></li>
+    </ul>
+  </body>
+
+</html>
