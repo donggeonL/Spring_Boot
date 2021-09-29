@@ -1,4 +1,4 @@
-# Spring_Boot
+# SpringFramework Study
 
 # ORM
 ##### (Object-relational mapping) -> Object를 테이블로 매핑시켜주는 기술
