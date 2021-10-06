@@ -38,3 +38,9 @@ ex)웹브라우저에http://example.com/exmaple.png를 입력하면 해당 그�
 # DELETE
 ##### 리소스를 삭제한다. (DELETE)
 서버에게 resource의 삭제를 요청합니다.
+
+# CRUD
+> C = Create
+> R = Read
+> U = Update
+> D = Delete
