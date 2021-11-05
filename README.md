@@ -40,7 +40,7 @@ ex)웹브라우저에http://example.com/exmaple.png를 입력하면 해당 그�
 서버에게 resource의 삭제를 요청합니다.
 
 # CRUD
-> 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능
+> 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능<br>
 > C = Create <br>
 > R = Read <br>
 > U = Update <br>
