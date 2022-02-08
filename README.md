@@ -45,3 +45,8 @@ ex)웹브라우저에http://example.com/exmaple.png를 입력하면 해당 그�
 > R = Read <br>
 > U = Update <br>
 > D = Delete <br>
+
+#URI 와 URL
+> 쉽게 이해해보자!
+> URI = 제일 큰 개념으로 자원의 위치를 나타내준다
+> URL = 자원의 식별자로 웹 에서는 ? 뒤에 나오는 쿼리문으로 이해하자!
