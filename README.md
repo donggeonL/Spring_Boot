@@ -1,19 +1,19 @@
 # SpringFramework Study
 
 # ORM
-##### (Object-relational mapping) -> Object를 테이블로 매핑시켜주는 기술
+ > ##### (Object-relational mapping) -> Object를 테이블로 매핑시켜주는 기술
 
 # JPA
-##### (java persistent api) -> ORM 기술의 자바 표준
+ > ##### (java persistent api) -> ORM 기술의 자바 표준
 
 # JDBC
-##### 자바 프로그램 안에서 SQL을 실행하기 위한 응용프로그램 인터페이스
+ > ##### 자바 프로그램 안에서 SQL을 실행하기 위한 응용프로그램 인터페이스
 
 # HIBERNATE
-##### 관계형데이터베이스에 객체지향개념을 적용하는 ORM 객체관계매핑 중 하나로, 디비와 프로그래밍 언어간의 격차를 해소하기 위해 등장
+ > ##### 관계형데이터베이스에 객체지향개념을 적용하는 ORM 객체관계매핑 중 하나로, 디비와 프로그래밍 언어간의 격차를 해소하기 위해 등장
 
 # API
-##### 응용 프로그램에서 사용할 수 있도록 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스
+ > ##### 응용 프로그램에서 사용할 수 있도록 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스
 
 # REST API
 ##### 어느정도 규격화한 API 대표적으로 (REST, SOAP)가 있다 REST API는 Restful한 API
