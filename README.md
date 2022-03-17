@@ -53,7 +53,7 @@
 
 # 공공데이터 XML을 JSON으로 받아오기
 >     @Test
->    public void start(){
+>     public void start(){
 >        //1. 공공데이터 다운로드
 >        RestTemplate rt = new RestTemplate();
 >        //serviceKey 인코딩 문제로 URI 객체로 감싸야한다
@@ -71,4 +71,4 @@
 >        }catch (Exception e){
 >            e.printStackTrace();
 >        }
->    }
+>     }
