@@ -50,3 +50,25 @@
 > 쉽게 이해해보자!<br>
 > URI = 제일 큰 개념으로 자원의 위치를 나타내준다<br>
 > URL = 자원의 식별자로 웹 에서는 ? 뒤에 나오는 쿼리문으로 이해하자!<br>
+
+# 공공데이터 XML을 JSON으로 받아오기
+>     @Test
+>    public void start(){
+>        //1. 공공데이터 다운로드
+>        RestTemplate rt = new RestTemplate();
+>        //serviceKey 인코딩 문제로 URI 객체로 감싸야한다
+>        String url = "http://apis.data.go.kr/B551182/rprtHospService/getRprtHospService? serviceKey=tzoFe2PJS55%2FBfRhEvfC8JBK7KNrxnPfJ1Gisq%2FeX7bo%2B%2FjMzT9tMNKS7D%2BhmvjYmmkjoNG%2F2BEVKA3h093OjA%3D%3D&pageNo=1&numOfRows=10&_type=json";
+>        URI uri = null;
+>        try{
+>            uri = new URI(url);
+>            ResponseDto dto = rt.getForObject(uri,ResponseDto.class);
+>            //System.out.println(dto);
+>            List<Item> hospitals = dto.getResponse().getBody().getItems().getItem();
+>            for(Item item : hospitals){
+>                System.out.println(item.getYadmNm());
+>                System.out.println("PCR 여부 : " + item.getPcrPsblYn());
+>            }
+>        }catch (Exception e){
+>            e.printStackTrace();
+>        }
+>    }
