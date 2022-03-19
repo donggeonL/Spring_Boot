@@ -58,7 +58,8 @@
 >        //1. 공공데이터 다운로드
 >        RestTemplate rt = new RestTemplate();
 >        //serviceKey 인코딩 문제로 URI 객체로 감싸야한다
->        String url = "http://apis.data.go.kr/B551182/rprtHospService/getRprtHospService? serviceKey=tzoFe2PJS55%2FBfRhEvfC8JBK7KNrxnPfJ1Gisq%2FeX7bo%2B%2FjMzT9tMNKS7D%2BhmvjYmmkjoNG%2F2BEVKA3h093OjA%3D%3D&pageNo=1&numOfRows=10&_type=json";
+>        //&_type=json 으로 json  변환 가능
+>        String url = "서비스키&_type=json";
 >        URI uri = null;
 >        try{
 >            uri = new URI(url);
