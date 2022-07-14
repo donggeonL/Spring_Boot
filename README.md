@@ -53,24 +53,26 @@
 
 # XML을 JSON으로 받아오기
 > ##### 일반 String으로 받아오니 디코딩 문제가 발생하여 String으로 받아온걸 URI로 변환하여 이슈를 해결!
->     @Test
->     public void start(){
->        //1. 공공데이터 다운로드
->        RestTemplate rt = new RestTemplate();
->        //serviceKey 인코딩 문제로 URI 객체로 감싸야한다
->        //&_type=json 으로 json  변환 가능
->        String url = "서비스키&_type=json";
->        URI uri = null;
->        try{
->            uri = new URI(url);
->            ResponseDto dto = rt.getForObject(uri,ResponseDto.class);
->            //System.out.println(dto);
->            List<Item> hospitals = dto.getResponse().getBody().getItems().getItem();
->            for(Item item : hospitals){
->                System.out.println(item.getYadmNm());
->                System.out.println("PCR 여부 : " + item.getPcrPsblYn());
->            }
->        }catch (Exception e){
->            e.printStackTrace();
->        }
->     }
+``` java
+@Test
+public void start(){
+ //1. 공공데이터 다운로드
+ RestTemplate rt = new RestTemplate();
+ //serviceKey 인코딩 문제로 URI 객체로 감싸야한다
+ //&_type=json 으로 json  변환 가능
+ String url = "서비스키&_type=json";
+ URI uri = null;
+ try{
+  uri = new URI(url);
+  ResponseDto dto = rt.getForObject(uri,ResponseDto.class);
+  //System.out.println(dto);
+  List<Item> hospitals = dto.getResponse().getBody().getItems().getItem();
+  for(Item item : hospitals){
+   System.out.println(item.getYadmNm());
+   System.out.println("PCR 여부 : " + item.getPcrPsblYn());
+  }
+ }catch (Exception e){
+  e.printStackTrace();
+  }
+}
+```
